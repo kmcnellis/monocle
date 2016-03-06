@@ -45,13 +45,13 @@ Cylon.robot({
     console.log(color + " detected");
     if (!talking){
         if (color === "red"){
-            exec('sh red.sh');
+          exec('sh red.sh',{silent:true});
         }
         if (color === "green"){
-            exec('sh green.sh');
+            exec('sh green.sh',{silent:true});
         }
         if (color === "blue"){
-            exec('sh blue.sh');
+            exec('sh blue.sh',{silent:true});
         }
     }
     };
