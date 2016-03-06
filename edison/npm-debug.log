@@ -1,0 +1,329 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.38
+4 warn package.json edison@1.0.0 No description
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ '/home/root/git/monocle/edison',
+6 verbose install   [ 'cylon',
+6 verbose install     'cylon-intel-iot',
+6 verbose install     'cylon-gpio',
+6 verbose install     'cylon-i2c',
+6 verbose install     'cylon-audio' ] ]
+7 info preinstall edison@1.0.0
+8 warn package.json mraa@0.9.5 No repository field.
+9 warn package.json string_decoder@0.10.31 string_decoder is also the name of a node core module.
+10 verbose readDependencies using package.json deps
+11 verbose already installed skipping cylon-i2c@^0.23.0 /home/root/git/monocle/edison
+12 verbose already installed skipping cylon-audio@* /home/root/git/monocle/edison
+13 verbose already installed skipping cylon@^1.2.0 /home/root/git/monocle/edison
+14 verbose already installed skipping cylon-intel-iot@^0.8.1 /home/root/git/monocle/edison
+15 verbose already installed skipping cylon-gpio@^0.27.0 /home/root/git/monocle/edison
+16 silly resolved []
+17 info build /home/root/git/monocle/edison
+18 verbose linkStuff [ false, false, false, '/home/root/git/monocle' ]
+19 info linkStuff edison@1.0.0
+20 verbose linkBins edison@1.0.0
+21 verbose linkMans edison@1.0.0
+22 verbose rebuildBundles edison@1.0.0
+23 verbose rebuildBundles [ '.bin',
+23 verbose rebuildBundles   'async',
+23 verbose rebuildBundles   'bindings',
+23 verbose rebuildBundles   'core-util-is',
+23 verbose rebuildBundles   'cylon',
+23 verbose rebuildBundles   'cylon-audio',
+23 verbose rebuildBundles   'cylon-gpio',
+23 verbose rebuildBundles   'cylon-i2c',
+23 verbose rebuildBundles   'cylon-intel-iot',
+23 verbose rebuildBundles   'debug',
+23 verbose rebuildBundles   'follow-redirects',
+23 verbose rebuildBundles   'home',
+23 verbose rebuildBundles   'inherits',
+23 verbose rebuildBundles   'isarray',
+23 verbose rebuildBundles   'keypress',
+23 verbose rebuildBundles   'lame',
+23 verbose rebuildBundles   'mraa',
+23 verbose rebuildBundles   'ms',
+23 verbose rebuildBundles   'nan',
+23 verbose rebuildBundles   'pcm-volume',
+23 verbose rebuildBundles   'player',
+23 verbose rebuildBundles   'pool_stream',
+23 verbose rebuildBundles   'readable-stream',
+23 verbose rebuildBundles   'shelljs',
+23 verbose rebuildBundles   'speaker',
+23 verbose rebuildBundles   'stream-consume',
+23 verbose rebuildBundles   'string_decoder',
+23 verbose rebuildBundles   'underscore' ]
+24 verbose rebuild bundle /home/root/git/monocle/edison/node_modules/async
+25 info build /home/root/git/monocle/edison/node_modules/async
+26 info preinstall async@0.9.2
+27 verbose linkStuff [ false,
+27 verbose linkStuff   false,
+27 verbose linkStuff   false,
+27 verbose linkStuff   '/home/root/git/monocle/edison/node_modules' ]
+28 info linkStuff async@0.9.2
+29 verbose linkBins async@0.9.2
+30 verbose linkMans async@0.9.2
+31 verbose rebuildBundles async@0.9.2
+32 info install async@0.9.2
+33 info postinstall async@0.9.2
+34 verbose rebuild bundle /home/root/git/monocle/edison/node_modules/bindings
+35 info build /home/root/git/monocle/edison/node_modules/bindings
+36 info preinstall bindings@1.2.1
+37 verbose linkStuff [ false,
+37 verbose linkStuff   false,
+37 verbose linkStuff   false,
+37 verbose linkStuff   '/home/root/git/monocle/edison/node_modules' ]
+38 info linkStuff bindings@1.2.1
+39 verbose linkBins bindings@1.2.1
+40 verbose linkMans bindings@1.2.1
+41 verbose rebuildBundles bindings@1.2.1
+42 info install bindings@1.2.1
+43 info postinstall bindings@1.2.1
+44 verbose rebuild bundle /home/root/git/monocle/edison/node_modules/core-util-is
+45 info build /home/root/git/monocle/edison/node_modules/core-util-is
+46 info preinstall core-util-is@1.0.2
+47 verbose linkStuff [ false,
+47 verbose linkStuff   false,
+47 verbose linkStuff   false,
+47 verbose linkStuff   '/home/root/git/monocle/edison/node_modules' ]
+48 info linkStuff core-util-is@1.0.2
+49 verbose linkBins core-util-is@1.0.2
+50 verbose linkMans core-util-is@1.0.2
+51 verbose rebuildBundles core-util-is@1.0.2
+52 info install core-util-is@1.0.2
+53 info postinstall core-util-is@1.0.2
+54 verbose rebuild bundle /home/root/git/monocle/edison/node_modules/debug
+55 info build /home/root/git/monocle/edison/node_modules/debug
+56 info preinstall debug@2.2.0
+57 verbose linkStuff [ false,
+57 verbose linkStuff   false,
+57 verbose linkStuff   false,
+57 verbose linkStuff   '/home/root/git/monocle/edison/node_modules' ]
+58 info linkStuff debug@2.2.0
+59 verbose linkBins debug@2.2.0
+60 verbose linkMans debug@2.2.0
+61 verbose rebuildBundles debug@2.2.0
+62 info install debug@2.2.0
+63 info postinstall debug@2.2.0
+64 verbose rebuild bundle /home/root/git/monocle/edison/node_modules/follow-redirects
+65 info build /home/root/git/monocle/edison/node_modules/follow-redirects
+66 info preinstall follow-redirects@0.0.7
+67 verbose linkStuff [ false,
+67 verbose linkStuff   false,
+67 verbose linkStuff   false,
+67 verbose linkStuff   '/home/root/git/monocle/edison/node_modules' ]
+68 info linkStuff follow-redirects@0.0.7
+69 verbose linkBins follow-redirects@0.0.7
+70 verbose linkMans follow-redirects@0.0.7
+71 verbose rebuildBundles follow-redirects@0.0.7
+72 info install follow-redirects@0.0.7
+73 info postinstall follow-redirects@0.0.7
+74 verbose rebuild bundle /home/root/git/monocle/edison/node_modules/home
+75 info build /home/root/git/monocle/edison/node_modules/home
+76 info preinstall home@0.1.8
+77 verbose linkStuff [ false,
+77 verbose linkStuff   false,
+77 verbose linkStuff   false,
+77 verbose linkStuff   '/home/root/git/monocle/edison/node_modules' ]
+78 info linkStuff home@0.1.8
+79 verbose linkBins home@0.1.8
+80 verbose linkMans home@0.1.8
+81 verbose rebuildBundles home@0.1.8
+82 info install home@0.1.8
+83 info postinstall home@0.1.8
+84 verbose rebuild bundle /home/root/git/monocle/edison/node_modules/inherits
+85 info build /home/root/git/monocle/edison/node_modules/inherits
+86 info preinstall inherits@2.0.1
+87 verbose linkStuff [ false,
+87 verbose linkStuff   false,
+87 verbose linkStuff   false,
+87 verbose linkStuff   '/home/root/git/monocle/edison/node_modules' ]
+88 info linkStuff inherits@2.0.1
+89 verbose linkBins inherits@2.0.1
+90 verbose linkMans inherits@2.0.1
+91 verbose rebuildBundles inherits@2.0.1
+92 info install inherits@2.0.1
+93 info postinstall inherits@2.0.1
+94 verbose rebuild bundle /home/root/git/monocle/edison/node_modules/isarray
+95 info build /home/root/git/monocle/edison/node_modules/isarray
+96 info preinstall isarray@0.0.1
+97 verbose linkStuff [ false,
+97 verbose linkStuff   false,
+97 verbose linkStuff   false,
+97 verbose linkStuff   '/home/root/git/monocle/edison/node_modules' ]
+98 info linkStuff isarray@0.0.1
+99 verbose linkBins isarray@0.0.1
+100 verbose linkMans isarray@0.0.1
+101 verbose rebuildBundles isarray@0.0.1
+102 info install isarray@0.0.1
+103 info postinstall isarray@0.0.1
+104 verbose rebuild bundle /home/root/git/monocle/edison/node_modules/keypress
+105 info build /home/root/git/monocle/edison/node_modules/keypress
+106 info preinstall keypress@0.2.1
+107 verbose linkStuff [ false,
+107 verbose linkStuff   false,
+107 verbose linkStuff   false,
+107 verbose linkStuff   '/home/root/git/monocle/edison/node_modules' ]
+108 info linkStuff keypress@0.2.1
+109 verbose linkBins keypress@0.2.1
+110 verbose linkMans keypress@0.2.1
+111 verbose rebuildBundles keypress@0.2.1
+112 info install keypress@0.2.1
+113 info postinstall keypress@0.2.1
+114 verbose rebuild bundle /home/root/git/monocle/edison/node_modules/lame
+115 info build /home/root/git/monocle/edison/node_modules/lame
+116 info preinstall lame@1.2.3
+117 verbose linkStuff [ false,
+117 verbose linkStuff   false,
+117 verbose linkStuff   false,
+117 verbose linkStuff   '/home/root/git/monocle/edison/node_modules' ]
+118 info linkStuff lame@1.2.3
+119 verbose linkBins lame@1.2.3
+120 verbose linkMans lame@1.2.3
+121 verbose rebuildBundles lame@1.2.3
+122 info install lame@1.2.3
+123 verbose unsafe-perm in lifecycle false
+124 info postinstall lame@1.2.3
+125 verbose rebuild bundle /home/root/git/monocle/edison/node_modules/mraa
+126 info build /home/root/git/monocle/edison/node_modules/mraa
+127 info preinstall mraa@0.9.5
+128 verbose linkStuff [ false,
+128 verbose linkStuff   false,
+128 verbose linkStuff   false,
+128 verbose linkStuff   '/home/root/git/monocle/edison/node_modules' ]
+129 info linkStuff mraa@0.9.5
+130 verbose linkBins mraa@0.9.5
+131 verbose linkMans mraa@0.9.5
+132 verbose rebuildBundles mraa@0.9.5
+133 info install mraa@0.9.5
+134 verbose unsafe-perm in lifecycle false
+135 info postinstall mraa@0.9.5
+136 verbose rebuild bundle /home/root/git/monocle/edison/node_modules/ms
+137 info build /home/root/git/monocle/edison/node_modules/ms
+138 info preinstall ms@0.7.1
+139 verbose linkStuff [ false,
+139 verbose linkStuff   false,
+139 verbose linkStuff   false,
+139 verbose linkStuff   '/home/root/git/monocle/edison/node_modules' ]
+140 info linkStuff ms@0.7.1
+141 verbose linkBins ms@0.7.1
+142 verbose linkMans ms@0.7.1
+143 verbose rebuildBundles ms@0.7.1
+144 info install ms@0.7.1
+145 info postinstall ms@0.7.1
+146 verbose rebuild bundle /home/root/git/monocle/edison/node_modules/nan
+147 info build /home/root/git/monocle/edison/node_modules/nan
+148 info preinstall nan@2.0.9
+149 verbose linkStuff [ false,
+149 verbose linkStuff   false,
+149 verbose linkStuff   false,
+149 verbose linkStuff   '/home/root/git/monocle/edison/node_modules' ]
+150 info linkStuff nan@2.0.9
+151 verbose linkBins nan@2.0.9
+152 verbose linkMans nan@2.0.9
+153 verbose rebuildBundles nan@2.0.9
+154 info install nan@2.0.9
+155 info postinstall nan@2.0.9
+156 verbose rebuild bundle /home/root/git/monocle/edison/node_modules/pcm-volume
+157 info build /home/root/git/monocle/edison/node_modules/pcm-volume
+158 info preinstall pcm-volume@1.0.0
+159 verbose linkStuff [ false,
+159 verbose linkStuff   false,
+159 verbose linkStuff   false,
+159 verbose linkStuff   '/home/root/git/monocle/edison/node_modules' ]
+160 info linkStuff pcm-volume@1.0.0
+161 verbose linkBins pcm-volume@1.0.0
+162 verbose linkMans pcm-volume@1.0.0
+163 verbose rebuildBundles pcm-volume@1.0.0
+164 info install pcm-volume@1.0.0
+165 info postinstall pcm-volume@1.0.0
+166 verbose rebuild bundle /home/root/git/monocle/edison/node_modules/player
+167 info build /home/root/git/monocle/edison/node_modules/player
+168 info preinstall player@0.6.1
+169 verbose linkStuff [ false,
+169 verbose linkStuff   false,
+169 verbose linkStuff   false,
+169 verbose linkStuff   '/home/root/git/monocle/edison/node_modules' ]
+170 info linkStuff player@0.6.1
+171 verbose linkBins player@0.6.1
+172 verbose link bins [ { player: 'bin/cli' },
+172 verbose link bins   '/home/root/git/monocle/edison/node_modules/.bin',
+172 verbose link bins   false ]
+173 verbose linkMans player@0.6.1
+174 verbose rebuildBundles player@0.6.1
+175 info install player@0.6.1
+176 info postinstall player@0.6.1
+177 verbose rebuild bundle /home/root/git/monocle/edison/node_modules/pool_stream
+178 info build /home/root/git/monocle/edison/node_modules/pool_stream
+179 info preinstall pool_stream@0.0.2
+180 verbose linkStuff [ false,
+180 verbose linkStuff   false,
+180 verbose linkStuff   false,
+180 verbose linkStuff   '/home/root/git/monocle/edison/node_modules' ]
+181 info linkStuff pool_stream@0.0.2
+182 verbose linkBins pool_stream@0.0.2
+183 verbose linkMans pool_stream@0.0.2
+184 verbose rebuildBundles pool_stream@0.0.2
+185 info install pool_stream@0.0.2
+186 info postinstall pool_stream@0.0.2
+187 verbose rebuild bundle /home/root/git/monocle/edison/node_modules/readable-stream
+188 info build /home/root/git/monocle/edison/node_modules/readable-stream
+189 info preinstall readable-stream@1.0.33
+190 verbose linkStuff [ false,
+190 verbose linkStuff   false,
+190 verbose linkStuff   false,
+190 verbose linkStuff   '/home/root/git/monocle/edison/node_modules' ]
+191 info linkStuff readable-stream@1.0.33
+192 verbose linkBins readable-stream@1.0.33
+193 verbose linkMans readable-stream@1.0.33
+194 verbose rebuildBundles readable-stream@1.0.33
+195 info install readable-stream@1.0.33
+196 info postinstall readable-stream@1.0.33
+197 verbose rebuild bundle /home/root/git/monocle/edison/node_modules/shelljs
+198 info build /home/root/git/monocle/edison/node_modules/shelljs
+199 info preinstall shelljs@0.6.0
+200 verbose linkStuff [ false,
+200 verbose linkStuff   false,
+200 verbose linkStuff   false,
+200 verbose linkStuff   '/home/root/git/monocle/edison/node_modules' ]
+201 info linkStuff shelljs@0.6.0
+202 verbose linkBins shelljs@0.6.0
+203 verbose link bins [ { shjs: './bin/shjs' },
+203 verbose link bins   '/home/root/git/monocle/edison/node_modules/.bin',
+203 verbose link bins   false ]
+204 verbose linkMans shelljs@0.6.0
+205 verbose rebuildBundles shelljs@0.6.0
+206 info install shelljs@0.6.0
+207 info postinstall shelljs@0.6.0
+208 verbose rebuild bundle /home/root/git/monocle/edison/node_modules/speaker
+209 info build /home/root/git/monocle/edison/node_modules/speaker
+210 info preinstall speaker@0.2.6
+211 verbose linkStuff [ false,
+211 verbose linkStuff   false,
+211 verbose linkStuff   false,
+211 verbose linkStuff   '/home/root/git/monocle/edison/node_modules' ]
+212 info linkStuff speaker@0.2.6
+213 verbose linkBins speaker@0.2.6
+214 verbose linkMans speaker@0.2.6
+215 verbose rebuildBundles speaker@0.2.6
+216 info install speaker@0.2.6
+217 verbose unsafe-perm in lifecycle false
+218 info speaker@0.2.6 Failed to exec install script
+219 error speaker@0.2.6 install: `node-gyp rebuild`
+219 error Exit status 1
+220 error Failed at the speaker@0.2.6 install script.
+220 error This is most likely a problem with the speaker package,
+220 error not with npm itself.
+220 error Tell the author that this fails on your system:
+220 error     node-gyp rebuild
+220 error You can get their info via:
+220 error     npm owner ls speaker
+220 error There is likely additional logging output above.
+221 error System Linux 3.10.17-poky-edison+
+222 error command "node" "/usr/bin/npm" "install"
+223 error cwd /home/root/git/monocle/edison
+224 error node -v v0.10.38
+225 error npm -v 1.4.28
+226 error code ELIFECYCLE
+227 verbose exit [ 1, true ]
