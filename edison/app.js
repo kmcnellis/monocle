@@ -91,35 +91,35 @@ Cylon.robot({
             after((0.1).seconds(), function() {
                 getReading(5, function(avgRead){
                     whiteArray.red = avgRead;
-                    // console.log("Set white red to "+avgRead);
+                    console.log("Set white red to "+avgRead);
                     setBlue();
                     after((0.1).seconds(), function() {
                         getReading(5, function(avgRead){
                             whiteArray.blue = avgRead;
-                            // console.log("Set white blue to "+avgRead);
+                            console.log("Set white blue to "+avgRead);
                             setGreen();
                             after((0.1).seconds(), function() {
                                 getReading(5, function(avgRead){
                                     whiteArray.green = avgRead;
-                                    // console.log("Set white green to "+avgRead);
+                                    console.log("Set white green to "+avgRead);
                                     setOff();
                                     after((5).seconds(), function() {
                                         setRed();
                                         after((0.1).seconds(), function() {
                                             getReading(5, function(avgRead){
                                                 blackArray.red = avgRead;
-                                                // console.log("Set black red to "+avgRead);
+                                                console.log("Set black red to "+avgRead);
                                                 setBlue();
                                                 after((0.1).seconds(), function() {
                                                     getReading(5, function(avgRead){
                                                         blackArray.blue = avgRead;
-                                                        // console.log("Set black blue to "+avgRead);
+                                                        console.log("Set black blue to "+avgRead);
                                                         setGreen();
                                                         after((0.1).seconds(), function() {
                                                             getReading(5, function(avgRead){
                                                                 blackArray.green = avgRead;
-                                                                // console.log("Set black green to "+avgRead);
-                                                                after((0.1).seconds(), function() {
+                                                                console.log("Set black green to "+avgRead);
+                                                                after((1).seconds(), function() {
                                                                     cb();
                                                                 });
                                                             });
