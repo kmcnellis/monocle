@@ -95,45 +95,126 @@ Cylon.robot({
     var setGreen = function(){
         my.rgb_led.setRGB("00FF00")
     }
+    var setOff = function(){
+        my.rgb_led.setRGB("000000")
+    }
 
-    var calibrate(){
+    var calibrate = function(cb){
             setRed();
-            after((0.001).seconds(), function() {
+            after((0.01).seconds(), function() {
                 getReading(5, function(avgRead){
                     whiteArray.red = avgRead;
+                    console.log("Set white red to "+avgRead);
+                    setBlue();
+                    after((0.01).seconds(), function() {
+                        getReading(5, function(avgRead){
+                            whiteArray.blue = avgRead;
+                            console.log("Set white blue to "+avgRead);
+                            setGreen();
+                            after((0.01).seconds(), function() {
+                                getReading(5, function(avgRead){
+                                    whiteArray.green = avgRead;
+                                    console.log("Set white green to "+avgRead);
+                                    setOff();
+                                    after((5).seconds(), function() {
+                                        setRed();
+                                        after((0.01).seconds(), function() {
+                                            getReading(5, function(avgRead){
+                                                blackArray.red = avgRead;
+                                                console.log("Set black red to "+avgRead);
+                                                setBlue();
+                                                after((0.01).seconds(), function() {
+                                                    getReading(5, function(avgRead){
+                                                        blackArray.blue = avgRead;
+                                                        console.log("Set black blue to "+avgRead);
+                                                        setGreen();
+                                                        after((0.01).seconds(), function() {
+                                                            getReading(5, function(avgRead){
+                                                                blackArray.green = avgRead;
+                                                                console.log("Set black green to "+avgRead);
+                                                                after((0.01).seconds(), function() {
+                                                                    cb();
+                                                                });
+                                                            });
+                                                        });
+                                                    });
+                                                });
+                                            });
+                                        });
+                                    });
+                                });
+                            });
+                        });
+                    });
                 });
-            }
+            });
+        };
 
-            digitalWrite(ledArray[i], LOW);
-            delay(100);
+    var getReading = function(times, cb, tally){
+        if (times ===0){
+            var avgRead = (tally) / times;
+            cb(avgRead);
+        }
+        if (!tally){
+            tally=0;
         }
 
+        var reading = my.ambient.analogRead();
+        tally = reading + tally;
+        after((0.01).seconds(), function() {
+            getReading(times-1, cb, tally);
+        });
+    };
 
-        }
-    var getReading = function(num, cb){
-        if (num ===0){
-            cb();
-        }
-
-    }
     every((1).seconds(), function() {
       console.log("Hello, human!");
     });
-    after((0.5).seconds(), function() {
-        setRed();
-        after((0.001).seconds(), function() {
-         getReading(5);
-         whiteArray[i] = avgRead;
-         digitalWrite(ledArray[i], LOW);
-         delay(100);
-      }
+    
+    after((5).seconds(), function() {
+        calibrate(function(){
+            every((1).seconds(), function() {
+              console.log("Check color");
+                    setRed();
+                    after((0.01).seconds(), function() {
+                        getReading(5, function(avgRead){
+                            colorArray.red = avgRead;
+                            console.log("Set colorArray red to "+avgRead);
+                            var greydiff = whiteArray.red - blackArray.red;
+                            colorArray.red = (colorArray.red - blackArray.red) / (greyDiff) * 255;//the reading returned minus the lowest value divided by the possible range multiplied by 255 is a value roughly between 0-255 representing the value
+                            //for the current reflectivity(for the color it is exposed to) of what is being scanned
+                            avgArray.red = (avgArray.red + colorArray.red) / 2;
 
-    });
+                            setBlue();
+                            after((0.01).seconds(), function() {
+                                getReading(5, function(avgRead){
+                                    colorArray.blue = avgRead;
+                                    console.log("Set colorArray blue to "+avgRead);
+                                    var greydiff = whiteArray.blue - blackArray.blue;
+                                    colorArray.blue = (colorArray.blue - blackArray.blue) / (greyDiff) * 255;//the reading returned minus the lowest value divided by the possible range multiplied by 255 is a value roughly between 0-255 representing the value
+                                    //for the current reflectivity(for the color it is exposed to) of what is being scanned
+                                    avgArray.blue = (avgArray.blue + colorArray.blue) / 2;
+                                    setGreen();
+                                    after((0.01).seconds(), function() {
+                                        getReading(5, function(avgRead){
+                                            colorArray.green = avgRead;
+                                            console.log("Set colorArray green to "+avgRead);
+                                            var greydiff = whiteArray.green - blackArray.green;
+                                            colorArray.green = (colorArray.green - blackArray.green) / (greyDiff) * 255;//the reading returned minus the lowest value divided by the possible range multiplied by 255 is a value roughly between 0-255 representing the value
+                                            //for the current reflectivity(for the color it is exposed to) of what is being scanned
+                                            avgArray.green = (avgArray.green + colorArray.green) / 2;
+                                            after((0.01).seconds(), function() {
+                                                setOff();
+                                            });
+                                        });
+                                    });
+                                });
+                            });
+                        });
+                    });
+              });
+            });
+        });
 
-
-    });
-  }
-});
-
+    } //end setup
 
 }).start();
