@@ -2,10 +2,7 @@
 
 angular.module('monocleApp')
   .controller('NavbarCtrl', function ($scope, $location) {
-    $scope.menu = [{
-      'title': 'Home',
-      'link': '/'
-    },
+    $scope.menu = [
     {
       'title': 'Purpose',
       'link': '#purpose'
@@ -29,4 +26,9 @@ angular.module('monocleApp')
     $scope.isActive = function(route) {
       return route === $location.path();
     };
+
+    angular.element('#navbar').on("resize", function() {
+
+    });
+
   });
