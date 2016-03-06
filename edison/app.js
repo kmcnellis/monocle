@@ -9,7 +9,7 @@ var whiteArray = {red:0,blue:0,green:0};
 var blackArray = {red:0,blue:0,green:0};
 var colorArray = {red:0,blue:0,green:0};
 var avgArray = {red:0,blue:0,green:0};
-
+var sensorVal = 0;
 require('shelljs/global');
 
 Cylon.robot({
@@ -27,7 +27,7 @@ Cylon.robot({
     tilt: { driver: 'button', pin: 3 },
     button: { driver: 'button', pin: 2 },
     ambient: { driver: 'analog-sensor', pin: 3 },
-    color_detector: { driver: 'analog-sensor', pin: 0},
+    color_detector: { driver: 'analog-sensor', pin: 0, connection: 'edison'},
 
   },
   work: function(my) {
@@ -35,6 +35,10 @@ Cylon.robot({
       my.laser.toggle();
     console.log("laser toggled");
 
+    });
+    my.sensor.on('analogRead', function(data) {
+      sensorVal = data;
+      console.log('Light Sensor Value:' + sensorVal);
     });
 
     every((1).seconds(), function() {
@@ -149,12 +153,22 @@ Cylon.robot({
             count=times;
         }
 
-        var reading = my.ambient.analogRead();
+        var reading = sensorVal;
         tally = reading + tally;
         after((0.01).seconds(), function() {
             getReading(times, cb, tally, count-1);
         });
     };
+    setInterval(function() {
+      if (ready) {
+        var toSend = {
+          analogSensor: sensorVal
+        };
+        if (err != null) {
+          console.log("Error sending analog sensor information: " + err);
+        }
+      }
+    }, 2000);
 
 
     after((5).seconds(), function() {
