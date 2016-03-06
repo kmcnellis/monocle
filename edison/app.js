@@ -20,13 +20,14 @@ Cylon.robot({
   },
   devices: {
     //outputs:
-    laser: { driver: 'led', pin: 13 },
-    rgb_led: { driver: 'rgb-led', redPin: 2, greenPin: 3, bluePin: 4 },
+    laser: { driver: 'led', pin: 7 },
+    rgb_led: { driver: 'rgb-led', redPin: 4, greenPin: 5, bluePin: 6 },
 
     //inputs:
-    tilt: { driver: 'button', pin: 4 },
-    ambient: { driver: 'analog-sensor', pin: 0, lowerLimit: 100, upperLimit: 900 },
-    color_detector: { driver: 'analog-sensor', pin: 1, lowerLimit: 0, upperLimit: 1024 },
+    tilt: { driver: 'button', pin: 3 },
+    button: { driver: 'button', pin: 2 },
+    ambient: { driver: 'analog-sensor', pin: 3, lowerLimit: 100, upperLimit: 900 },
+    color_detector: { driver: 'analog-sensor', pin: 0, lowerLimit: 0, upperLimit: 1024 },
 
   },
   work: function(my) {
@@ -169,7 +170,7 @@ Cylon.robot({
     every((1).seconds(), function() {
       console.log("Hello, human!");
     });
-    
+
     after((5).seconds(), function() {
         calibrate(function(){
             every((1).seconds(), function() {
