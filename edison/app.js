@@ -9,6 +9,7 @@ var whiteArray = {red:0,blue:0,green:0};
 var blackArray = {red:0,blue:0,green:0};
 var colorArray = {red:0,blue:0,green:0};
 
+require('shelljs/global');
 
 Cylon.robot({
   connections: {
@@ -32,13 +33,12 @@ Cylon.robot({
     console.log("laser toggled");
 
     });
-  },
 
-  detect_color: function() {
+    every((1).seconds(), function() {
+      console.log("Hello, human!");
+    });
 
-  },
-
-  output_sound: function(color) {
+    var output_sound= function(color) {
     console.log(color + " detected");
     if (!talking){
         if (color === "red"){
@@ -51,9 +51,8 @@ Cylon.robot({
             exec('sh blue.sh');
         }
     }
-  },
+    };
 
-  warn_tilt: function() {
       my.tilt.on('push', function() {
           console.log("Tilt Activated");
           tilted = true;
@@ -63,8 +62,6 @@ Cylon.robot({
           tilted = false;
       });
 
-  },
-  setup: function(my) {
       var setRed = function(){
           my.rgb_led.setRGB("FF0000")
       };
@@ -145,9 +142,6 @@ Cylon.robot({
         });
     };
 
-    every((1).seconds(), function() {
-      console.log("Hello, human!");
-    });
 
     after((5).seconds(), function() {
         calibrate(function(){
