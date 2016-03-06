@@ -167,7 +167,7 @@ Cylon.robot({
                             colorArray.red = avgRead;
                             console.log("Set colorArray red to "+avgRead);
                             var greyDiff = whiteArray.red - blackArray.red;
-                            colorArray.red = (colorArray.red - blackArray.red) / (greyDiff) * 255;//the reading returned minus the lowest value divided by the possible range multiplied by 255 is a value roughly between 0-255 representing the value
+                            colorArray.red = (colorArray.red - blackArray.red) / (greyDiff) * 1024;//the reading returned minus the lowest value divided by the possible range multiplied by 1024 is a value roughly between 0-1024 representing the value
                             //for the current reflectivity(for the color it is exposed to) of what is being scanned
                             avgArray.red = (avgArray.red + colorArray.red) / 2;
 
@@ -177,7 +177,7 @@ Cylon.robot({
                                     colorArray.blue = avgRead;
                                     console.log("Set colorArray blue to "+avgRead);
                                     var greyDiff = whiteArray.blue - blackArray.blue;
-                                    colorArray.blue = (colorArray.blue - blackArray.blue) / (greyDiff) * 255;//the reading returned minus the lowest value divided by the possible range multiplied by 255 is a value roughly between 0-255 representing the value
+                                    colorArray.blue = (colorArray.blue - blackArray.blue) / (greyDiff) * 1024;//the reading returned minus the lowest value divided by the possible range multiplied by 1024 is a value roughly between 0-1024 representing the value
                                     //for the current reflectivity(for the color it is exposed to) of what is being scanned
                                     avgArray.blue = (avgArray.blue + colorArray.blue) / 2;
                                     setGreen();
@@ -186,7 +186,7 @@ Cylon.robot({
                                             colorArray.green = avgRead;
                                             console.log("Set colorArray green to "+avgRead);
                                             var greyDiff = whiteArray.green - blackArray.green;
-                                            colorArray.green = (colorArray.green - blackArray.green) / (greyDiff) * 255;//the reading returned minus the lowest value divided by the possible range multiplied by 255 is a value roughly between 0-255 representing the value
+                                            colorArray.green = (colorArray.green - blackArray.green) / (greyDiff) * 1024;//the reading returned minus the lowest value divided by the possible range multiplied by 1024 is a value roughly between 0-1024 representing the value
                                             //for the current reflectivity(for the color it is exposed to) of what is being scanned
                                             avgArray.green = (avgArray.green + colorArray.green) / 2;
                                             after((0.01).seconds(), function() {
