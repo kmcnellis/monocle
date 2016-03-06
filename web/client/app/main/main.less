@@ -8,7 +8,6 @@
 }
 
 #banner h1 {
-  font-size: 60px;
   line-height: 1;
   letter-spacing: -1px;
 }
@@ -35,7 +34,7 @@
 
 .unit{
   position: relative;
-  padding: 30px 15px;
+  padding: 6em 0 6em 0;
   text-align: left;
   font-size: 16px;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
@@ -53,6 +52,10 @@
     font-weight: lighter;
   }
 }
+.btn-contrast{
+  .btn-default;
+  padding: 1em;
+}
 
 .dark{
   color: rgb(242, 242, 242);
@@ -60,6 +63,10 @@
 
   h2:after{
     border-bottom: 1px solid rgb(242, 242, 242);
+  }
+  .btn-contrast{
+    color: #5343b9;
+    background-color: white;
   }
 }
 
@@ -76,7 +83,10 @@
   @media (min-width: @screen-md-min) {
       background-attachment: fixed;
   }
-
+  .btn-contrast{
+    color: white;
+    background-color: #5343b9;
+  }
 
 }
 
@@ -86,6 +96,10 @@
 
   h2:after{
     border-bottom: 1px solid rgb(62, 62, 62);
+  }
+  .btn-contrast{
+    color: white;
+    background-color: #5343b9;
   }
 }
 
@@ -97,8 +111,12 @@
   .unit;
   .dark;
   text-align: center;
+  font-size: 40px;
+  padding: 4em 0 2em 0;
+
   h1{
     font-family: 'Raleway', sans-serif;
+    font-size: 75px;
   }
 }
 .purpose-unit{
@@ -116,11 +134,27 @@
 }
 .demo-unit{
   .unit;
-  .dark;
+  .transparent;
 }
 .action-unit{
   .unit;
   .light;
+  text-align: center;
+  h2{
+    margin-bottom: 30px;
+  }
+  h2:after{
+    width: 100px;
+    height: 20px;
+    content: ' ';
+    clear: right;
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+
+  }
+
 }
 
 .main-image{
