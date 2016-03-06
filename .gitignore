@@ -7,4 +7,3 @@ web/client/bower_components
 web/dist
 web/server/config/local.env.js
 web/npm-debug.log
-web/
