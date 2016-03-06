@@ -18,7 +18,9 @@ Cylon.robot({
   devices: {
     //outputs:
     laser: { driver: 'led', pin: 7 },
-    rgb_led: { driver: 'rgb-led', redPin: 4, greenPin: 5, bluePin: 6 },
+    redLed: { driver: 'led', pin: 4 }
+    greenLed: { driver: 'led', pin: 5 }
+    blueLed: { driver: 'led', pin: 6 }
 
     //inputs:
     tilt: { driver: 'button', pin: 3 },
@@ -63,16 +65,24 @@ Cylon.robot({
       });
 
       var setRed = function(){
-          my.rgb_led.setRGB("ff0000")
+          my.redLed.turnOn()
+          my.greenLed.turnOff()
+          my.blueLed.turnOff()
       };
       var setBlue = function(){
-          my.rgb_led.setRGB("0000ff")
+          my.redLed.turnOff()
+          my.greenLed.turnOff()
+          my.blueLed.turnOn()
       }
       var setGreen = function(){
-          my.rgb_led.setRGB("00ff00")
+          my.redLed.turnOff()
+          my.greenLed.turnOn()
+          my.blueLed.turnOff()
       }
       var setOff = function(){
-          my.rgb_led.setRGB("000000")
+          my.redLed.turnOff()
+          my.greenLed.turnOff()
+          my.blueLed.turnOff()
       }
 
     var calibrate = function(cb){
