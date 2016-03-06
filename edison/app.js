@@ -2,11 +2,7 @@
 
 var Cylon = require('cylon')
 var tilted = false;
-var Player = require('player');
 var talking = false;
-var red = new Player('./mp3/red.mp3');
-var green = new Player('./mp3/green.mp3');
-var blue = new Player('./mp3/blue.mp3');
 var leds = {red:2,blue:3,green:4};
 var color = "";
 var whiteArray = {red:0,blue:0,green:0};
@@ -45,32 +41,12 @@ Cylon.robot({
     if (!talking){
         if (color === "red"){
 
-            red.play(function(err, player){
-                if (err){
-                    console.log("Error playing red",err);
-                }
-                console.log('red playend!');
-                talking = false;
-            });
-
         }
         if (color === "green"){
-            green.play(function(err, player){
-                if (err){
-                    console.log("Error playing green",err);
-                }
-                console.log('green playend!');
-                talking = false;
-            });
+
         }
         if (color === "blue"){
-            blue.play(function(err, player){
-                if (err){
-                    console.log("Error playing blue",err);
-                }
-                console.log('blue playend!');
-                talking = false;
-            });
+
         }
     }
   },
@@ -205,6 +181,20 @@ Cylon.robot({
                                             avgArray.green = (avgArray.green + colorArray.green) / 2;
                                             after((0.01).seconds(), function() {
                                                 setOff();
+                                                if(avgArray.red > avgArray.green && avgArray.red > avgArray.blue) {
+                                                    console.log("Detected Red");
+                                                    output_sound("red");
+                                                }
+                                                else if(avgArray.green > avgArray.red && avgArray.green > avgArray.blue) {
+                                                    console.log("Detected Green");
+                                                    output_sound("green");
+
+                                                }
+                                                else {
+                                                    console.log("Detected Blue");
+                                                    output_sound("blue");
+                                                }
+
                                             });
                                         });
                                     });
