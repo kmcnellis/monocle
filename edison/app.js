@@ -26,8 +26,8 @@ Cylon.robot({
     //inputs:
     tilt: { driver: 'button', pin: 3 },
     button: { driver: 'button', pin: 2 },
-    ambient: { driver: 'analog-sensor', pin: 3, lowerLimit: 100, upperLimit: 900 },
-    color_detector: { driver: 'analog-sensor', pin: 0, lowerLimit: 0, upperLimit: 1024 },
+    ambient: { driver: 'analog-sensor', pin: 3 },
+    color_detector: { driver: 'analog-sensor', pin: 0},
 
   },
   work: function(my) {
