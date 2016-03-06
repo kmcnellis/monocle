@@ -5,7 +5,24 @@ angular.module('monocleApp')
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
-    }];
+    },
+    {
+      'title': 'Purpose',
+      'link': '#purpose'
+    },
+    {
+      'title': 'Features',
+      'link': '#features'
+    },
+    {
+      'title': 'Team',
+      'link': '#team'
+    },
+    {
+      'title': 'Demo',
+      'link': '#demo'
+    }
+  ];
 
     $scope.isCollapsed = true;
 
