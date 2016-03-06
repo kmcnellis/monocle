@@ -19,7 +19,7 @@
     "angular-scenario": ">=1.2.*"
   },
   "appPath": "client",
-  "moduleName": "itosApp",
+  "moduleName": "monocleApp",
   "overrides": {
     "bootstrap": {
       "main": [
