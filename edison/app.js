@@ -8,6 +8,7 @@ var color = "";
 var whiteArray = {red:0,blue:0,green:0};
 var blackArray = {red:0,blue:0,green:0};
 var colorArray = {red:0,blue:0,green:0};
+var avgArray = {red:0,blue:0,green:0};
 
 require('shelljs/global');
 
