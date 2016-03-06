@@ -9,10 +9,10 @@ Cylon.robot({
   devices: {
     //outputs:
     laser: { driver: 'led', pin: 13 },
-    rgb_led: { driver: 'rgb-led', redPin: 3, greenPin: 5, bluePin: 6 },
+    rgb_led: { driver: 'rgb-led', redPin: 2, greenPin: 3, bluePin: 4 },
 
     //inputs:
-    button: { driver: 'button', pin: 2 },
+    button: { driver: 'button', pin: 5 },
     ambient: { driver: 'analog-sensor', pin: 0, lowerLimit: 100, upperLimit: 900 },
     color_detector: { driver: 'analog-sensor', pin: 1, lowerLimit: 0, upperLimit: 1024 },
 

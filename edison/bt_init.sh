@@ -1,4 +1,4 @@
-rfkill unblock blueooth
+rfkill unblock bluetooth
 bluetoothctl
 pair FC:58:FA:89:55:4F
 connect FC:58:FA:89:55:4F
