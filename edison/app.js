@@ -136,19 +136,22 @@ Cylon.robot({
             });
         };
 
-    var getReading = function(times, cb, tally){
-        if (times ===0){
+    var getReading = function(times, cb, tally, count){
+        if (count ===0){
             var avgRead = (tally) / times;
-            cb(avgRead);
+            return cb(avgRead);
         }
         if (!tally){
             tally=0;
+        }
+        if (!count){
+            count=times;
         }
 
         var reading = my.ambient.analogRead();
         tally = reading + tally;
         after((0.01).seconds(), function() {
-            getReading(times-1, cb, tally);
+            getReading(times, cb, tally, times-1);
         });
     };
 
