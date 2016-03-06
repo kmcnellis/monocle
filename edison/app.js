@@ -151,7 +151,7 @@ Cylon.robot({
         var reading = my.ambient.analogRead();
         tally = reading + tally;
         after((0.01).seconds(), function() {
-            getReading(times, cb, tally, times-1);
+            getReading(times, cb, tally, count-1);
         });
     };
 
