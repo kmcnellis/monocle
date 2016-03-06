@@ -38,7 +38,7 @@ Cylon.robot({
     });
 
     every((1).seconds(), function() {
-      console.log("Hello, human!");
+    //   console.log("Hello, human!");
     });
 
     var output_sound= function(color) {
@@ -91,34 +91,34 @@ Cylon.robot({
             after((0.1).seconds(), function() {
                 getReading(5, function(avgRead){
                     whiteArray.red = avgRead;
-                    console.log("Set white red to "+avgRead);
+                    // console.log("Set white red to "+avgRead);
                     setBlue();
                     after((0.1).seconds(), function() {
                         getReading(5, function(avgRead){
                             whiteArray.blue = avgRead;
-                            console.log("Set white blue to "+avgRead);
+                            // console.log("Set white blue to "+avgRead);
                             setGreen();
                             after((0.1).seconds(), function() {
                                 getReading(5, function(avgRead){
                                     whiteArray.green = avgRead;
-                                    console.log("Set white green to "+avgRead);
+                                    // console.log("Set white green to "+avgRead);
                                     setOff();
                                     after((5).seconds(), function() {
                                         setRed();
                                         after((0.1).seconds(), function() {
                                             getReading(5, function(avgRead){
                                                 blackArray.red = avgRead;
-                                                console.log("Set black red to "+avgRead);
+                                                // console.log("Set black red to "+avgRead);
                                                 setBlue();
                                                 after((0.1).seconds(), function() {
                                                     getReading(5, function(avgRead){
                                                         blackArray.blue = avgRead;
-                                                        console.log("Set black blue to "+avgRead);
+                                                        // console.log("Set black blue to "+avgRead);
                                                         setGreen();
                                                         after((0.1).seconds(), function() {
                                                             getReading(5, function(avgRead){
                                                                 blackArray.green = avgRead;
-                                                                console.log("Set black green to "+avgRead);
+                                                                // console.log("Set black green to "+avgRead);
                                                                 after((0.1).seconds(), function() {
                                                                     cb();
                                                                 });
@@ -160,12 +160,12 @@ Cylon.robot({
     after((5).seconds(), function() {
         calibrate(function(){
             every((1).seconds(), function() {
-              console.log("Check color");
+            //   console.log("Check color");
                     setRed();
                     after((0.01).seconds(), function() {
                         getReading(5, function(avgRead){
                             colorArray.red = avgRead;
-                            console.log("Set colorArray red to "+avgRead);
+                            // console.log("Set colorArray red to "+avgRead);
                             var greyDiff = whiteArray.red - blackArray.red;
                             colorArray.red = (colorArray.red - blackArray.red) / (greyDiff) * 255;//the reading returned minus the lowest value divided by the possible range multiplied by 255 is a value roughly between 0-255 representing the value
                             //for the current reflectivity(for the color it is exposed to) of what is being scanned
@@ -175,7 +175,7 @@ Cylon.robot({
                             after((0.01).seconds(), function() {
                                 getReading(5, function(avgRead){
                                     colorArray.blue = avgRead;
-                                    console.log("Set colorArray blue to "+avgRead);
+                                    // console.log("Set colorArray blue to "+avgRead);
                                     var greyDiff = whiteArray.blue - blackArray.blue;
                                     colorArray.blue = (colorArray.blue - blackArray.blue) / (greyDiff) * 255;//the reading returned minus the lowest value divided by the possible range multiplied by 255 is a value roughly between 0-255 representing the value
                                     //for the current reflectivity(for the color it is exposed to) of what is being scanned
@@ -184,7 +184,7 @@ Cylon.robot({
                                     after((0.01).seconds(), function() {
                                         getReading(5, function(avgRead){
                                             colorArray.green = avgRead;
-                                            console.log("Set colorArray green to "+avgRead);
+                                            // console.log("Set colorArray green to "+avgRead);
                                             var greyDiff = whiteArray.green - blackArray.green;
                                             colorArray.green = (colorArray.green - blackArray.green) / (greyDiff) * 255;//the reading returned minus the lowest value divided by the possible range multiplied by 255 is a value roughly between 0-255 representing the value
                                             //for the current reflectivity(for the color it is exposed to) of what is being scanned
