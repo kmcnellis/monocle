@@ -36,10 +36,10 @@ Cylon.robot({
     console.log("laser toggled");
 
     });
-    my.sensor.on('analogRead', function(data) {
-      sensorVal = data;
-      console.log('Light Sensor Value:' + sensorVal);
-    });
+    // my.color_detector.on('analogRead', function(data) {
+    //   sensorVal = data;
+    //   console.log('Light Sensor Value:' + sensorVal);
+    // });
 
     every((1).seconds(), function() {
     //   console.log("Hello, human!");
