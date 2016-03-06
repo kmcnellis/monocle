@@ -153,22 +153,12 @@ Cylon.robot({
             count=times;
         }
 
-        var reading = sensorVal;
+        var reading = my.color_detector.analogRead();
         tally = reading + tally;
         after((0.01).seconds(), function() {
             getReading(times, cb, tally, count-1);
         });
     };
-    setInterval(function() {
-      if (ready) {
-        var toSend = {
-          analogSensor: sensorVal
-        };
-        if (err != null) {
-          console.log("Error sending analog sensor information: " + err);
-        }
-      }
-    }, 2000);
 
 
     after((5).seconds(), function() {
