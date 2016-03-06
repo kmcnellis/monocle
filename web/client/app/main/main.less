@@ -36,50 +36,73 @@
 .unit{
       position: relative;
       padding: 30px 15px;
-      text-align: center;
+      text-align: left;
+      font-size: 16px;
       text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
       h1, h2{
         font-weight: normal;
+      }
+      h2:after{
+        width: 100px;
+        height: 20px;
+        content: ' ';
+        clear: right;
+        display: block;
       }
       p{
         font-weight: lighter;
       }
 }
 
+.dark{
+  color: rgb(242, 242, 242);
+  background: #5343b9;
+
+  h2:after{
+    border-bottom: 1px solid rgb(242, 242, 242);
+  }
+}
+
+.light{
+  color: rgb(62, 62, 62);
+  background: white;
+
+  h2:after{
+    border-bottom: 1px solid rgb(62, 62, 62);
+  }
+}
+
 .main-unit{
   .unit;
-  background: #5343b9;
-  color: white;
+  .dark;
+  text-align: center;
   h1{
     font-family: 'Raleway', sans-serif;
   }
 }
 .purpose-unit{
   .unit;
-  background: white;
-  color: black;
+  .light;
 
 }
 .features-unit{
   .unit;
-  background: #5343b9;
-  color: white;
+  .dark;
 }
 .team-unit{
   .unit;
   background: white;
-  color: black;
+  .light;
 
 }
 .demo-unit{
   .unit;
-  background: #5343b9;
-  color: white;
+  .dark;
 }
 .action-unit{
   .unit;
   background: white;
-  color: black;
+  .light;
 
 }
 
