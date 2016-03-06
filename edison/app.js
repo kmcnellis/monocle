@@ -29,6 +29,8 @@ Cylon.robot({
   work: function(my) {
     my.button.on('push', function() {
       my.laser.toggle();
+    console.log("laser toggled");
+
     });
   },
 
@@ -52,29 +54,29 @@ Cylon.robot({
   },
 
   warn_tilt: function() {
-    my.tilt.on('push', function() {
-      console.log("Tilt Activated");
-      tilted = true;
-    });
-    my.tilt.on('release', function() {
-      console.log("Tilt Deactivated");
-      tilted = false;
-    });
+      my.tilt.on('push', function() {
+          console.log("Tilt Activated");
+          tilted = true;
+      });
+      my.tilt.on('release', function() {
+          console.log("Tilt Deactivated");
+          tilted = false;
+      });
 
-},
+  },
   setup: function(my) {
-    var setRed = function(){
-        my.rgb_led.setRGB("FF0000")
-    };
-    var setBlue = function(){
-        my.rgb_led.setRGB("0000FF")
-    }
-    var setGreen = function(){
-        my.rgb_led.setRGB("00FF00")
-    }
-    var setOff = function(){
-        my.rgb_led.setRGB("000000")
-    }
+      var setRed = function(){
+          my.rgb_led.setRGB("FF0000")
+      };
+      var setBlue = function(){
+          my.rgb_led.setRGB("0000FF")
+      }
+      var setGreen = function(){
+          my.rgb_led.setRGB("00FF00")
+      }
+      var setOff = function(){
+          my.rgb_led.setRGB("000000")
+      }
 
     var calibrate = function(cb){
             setRed();
