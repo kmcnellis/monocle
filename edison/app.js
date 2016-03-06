@@ -191,11 +191,11 @@ Cylon.robot({
                                             avgArray.green = (avgArray.green + colorArray.green) / 2;
                                             after((0.01).seconds(), function() {
                                                 setOff();
-                                                if(avgArray.red > avgArray.green && avgArray.red > avgArray.blue) {
+                                                if(colorArray.red > colorArray.green && colorArray.red > colorArray.blue) {
                                                     console.log("Detected Red");
                                                     output_sound("red");
                                                 }
-                                                else if(avgArray.green > avgArray.red && avgArray.green > avgArray.blue) {
+                                                else if(colorArray.green > colorArray.red && colorArray.green > colorArray.blue) {
                                                     console.log("Detected Green");
                                                     output_sound("green");
 
