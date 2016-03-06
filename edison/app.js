@@ -63,13 +63,13 @@ Cylon.robot({
       });
 
       var setRed = function(){
-          my.rgb_led.setRGB("FF0000")
+          my.rgb_led.setRGB("ff0000")
       };
       var setBlue = function(){
-          my.rgb_led.setRGB("0000FF")
+          my.rgb_led.setRGB("0000ff")
       }
       var setGreen = function(){
-          my.rgb_led.setRGB("00FF00")
+          my.rgb_led.setRGB("00ff00")
       }
       var setOff = function(){
           my.rgb_led.setRGB("000000")
