@@ -18,9 +18,9 @@ Cylon.robot({
   devices: {
     //outputs:
     laser: { driver: 'led', pin: 7 },
-    redLed: { driver: 'led', pin: 4 }
-    greenLed: { driver: 'led', pin: 5 }
-    blueLed: { driver: 'led', pin: 6 }
+    redLed: { driver: 'led', pin: 4 },
+    greenLed: { driver: 'led', pin: 5 },
+    blueLed: { driver: 'led', pin: 6 },
 
     //inputs:
     tilt: { driver: 'button', pin: 3 },
